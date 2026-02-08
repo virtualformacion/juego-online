@@ -1,0 +1,3 @@
+# Juegos
+
+- Aviador: `/juegos/aviador/`

@@ -1,0 +1,13 @@
+{
+  "name": "crash-aviador-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Crash Aviador demo (frontend) listo para GitHub + Netlify",
+  "scripts": {
+    "dev": "http-server -p 5173 -c-1 .",
+    "start": "http-server -p 5173 -c-1 ."
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

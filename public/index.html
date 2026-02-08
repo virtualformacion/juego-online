@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Lotería · Login</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div style="font-weight:700">Lotería · Portal (Demo)</div>
+        <small class="muted">Sin JWT · DB en GitHub · Solo demo</small>
+      </div>
+      <span class="badge" id="regBadge">Registro: ...</span>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <h2 style="margin-top:0" id="modeTitle">Ingresar</h2>
+          <small class="muted">Usuario y contraseña: solo minúsculas y números (3-20).</small>
+          <hr/>
+          <form id="form">
+            <label>Usuario</label>
+            <input id="username" placeholder="ej: andres" autocomplete="username"/>
+            <div style="height:10px"></div>
+            <label>Contraseña</label>
+            <input id="password" placeholder="ej: 111111" type="password" autocomplete="current-password"/>
+            <div id="countryWrap" style="display:none">
+              <div style="height:10px"></div>
+              <label>País</label>
+              <select id="country">
+                <option value="CO">Colombia (COP)</option>
+                <option value="OT">Otro país (USD)</option>
+              </select>
+            </div>
+            <div style="height:14px"></div>
+            <button type="submit" id="submitBtn">Entrar</button>
+          </form>
+
+          <div id="toast"></div>
+
+          <hr/>
+          <button id="toggleMode" class="secondary">Crear cuenta</button>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <h2 style="margin-top:0">Datos de prueba</h2>
+          <div class="pills">
+            <span class="pill">admin / luisymaye</span>
+            <span class="pill">andres / 111111</span>
+          </div>
+          <hr/>
+          <p><small class="muted">
+            Esta demo usa DB en GitHub y no tiene seguridad real. Cualquier persona que sepa el endpoint puede escribir la DB
+            si el token de Netlify tiene permisos.
+          </small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Admin · Lotería</title>
+  <link rel="stylesheet" href="/styles.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div style="font-weight:700">Panel Admin</div>
+        <small class="muted">Gestiona usuarios, saldo y registro</small>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <span class="badge" id="who"></span>
+        <button class="secondary" id="logout">Salir</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <h3 style="margin-top:0">Configuración</h3>
+          <div id="allowRegisterLine"></div>
+          <div style="height:10px"></div>
+          <button class="secondary" id="toggleRegister">Cambiar estado registro</button>
+
+          <hr/>
+          <h3>Clave del admin</h3>
+          <input id="adminNewPass" placeholder="nueva clave (minúsculas+numeros)"/>
+          <div style="height:10px"></div>
+          <button class="secondary" id="saveAdminPass">Actualizar clave</button>
+
+          <div id="toast"></div>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="card">
+          <h3 style="margin-top:0">Usuarios</h3>
+          <label>Filtro</label>
+          <select id="filter">
+            <option value="all">Todos</option>
+            <option value="CO">Colombia (COP)</option>
+            <option value="OT">Otros países (USD)</option>
+          </select>
+          <div style="height:10px"></div>
+          <table>
+            <thead>
+              <tr><th>Usuario</th><th>País</th><th>Saldo</th><th>Registro</th><th></th></tr>
+            </thead>
+            <tbody id="usersTbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <h3 style="margin-top:0">Detalle</h3>
+          <div id="detailEmpty"><small class="muted">Selecciona un usuario.</small></div>
+          <div id="detail" style="display:none">
+            <div id="detailHead"></div>
+
+            <hr/>
+            <h4>Medios de pago</h4>
+            <div id="payDetail"><small class="muted">Sin medios de pago guardados.</small></div>
+
+            <hr/>
+            <h4>Saldo</h4>
+            <input id="delta" type="number" placeholder="monto"/>
+            <div style="height:10px"></div>
+            <div class="row">
+              <div class="col"><button id="addBal">Sumar</button></div>
+              <div class="col"><button id="subBal" class="secondary">Restar</button></div>
+            </div>
+
+            <hr/>
+            <h4>Cambiar contraseña</h4>
+            <input id="userNewPass" placeholder="nueva clave"/>
+            <div style="height:10px"></div>
+            <button id="saveUserPass" class="secondary">Actualizar clave</button>
+
+            <hr/>
+            <h4>Eliminar usuario</h4>
+            <button id="delUser" class="danger">Eliminar</button>
+
+            <hr/>
+            <h4>Historial (demo)</h4>
+            <table>
+              <thead><tr><th>Fecha</th><th>Números</th><th>Apuesta</th><th>Coincid.</th><th>Payout</th></tr></thead>
+              <tbody id="histTbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
