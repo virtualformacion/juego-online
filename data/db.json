@@ -812,6 +812,16 @@
           "winner": "barbar",
           "mult": 100,
           "payout": 20000
+        },
+        {
+          "at": "2026-02-08T04:17:18.624Z",
+          "bets": {
+            "barbar": 1
+          },
+          "total": 200,
+          "winner": "lemon",
+          "mult": 2,
+          "payout": 0
         }
       ]
     },
