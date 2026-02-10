@@ -21,7 +21,7 @@
       "role": "user",
       "country": "CO",
       "currency": "COP",
-      "balance": 79089.16642981193,
+      "balance": 78989,
       "createdAt": "2026-01-31T00:00:00.000Z",
       "payments": {
         "binance": "",
@@ -522,7 +522,19 @@
         "seen": true,
         "note": "Ajuste admin (suma)"
       },
-      "pendingBets": [],
+      "pendingBets": [
+        {
+          "id": "cf101849-6c73-4fbc-8da0-3a9172c54655",
+          "createdAt": "2026-02-10T03:22:42.502Z",
+          "targetCycle": 9837188,
+          "pick": [
+            "04",
+            "05",
+            "06"
+          ],
+          "bet": 100
+        }
+      ],
       "rouletteHistory": [
         {
           "at": 1770158896144,
