@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Usuario · Lotería</title>
+<link href="/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+<div>
+<div style="font-weight:700">Panel Usuario</div>
+<small class="muted">Saldo, medios de pago y juego demo</small>
+</div>
+<div style="display:flex;gap:10px;align-items:center">
+<span class="badge" id="who"></span>
+<button class="secondary" id="logout">Salir</button>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="card">
+<h3 style="margin-top:0">Tu cuenta</h3>
+<div id="saldoLine"></div>
+<div id="notice"></div>
+<div style="height:10px"></div>
+<button id="topup">Recargar saldo</button>
+<div class="miniForm" id="topupForm" style="display:none; margin-top:10px">
+<label>Monto a recargar</label>
+<input id="topupAmount" inputmode="decimal" placeholder="Ej: 50000" type="number"/>
+<div style="height:8px"></div>
+<button class="secondary" id="topupNow">Recargar ahora</button>
+<div class="muted" id="topupErr" style="margin-top:6px"></div>
+</div>
+<div style="height:10px"></div>
+<button id="withdraw">Retirar</button>
+<div class="miniForm" id="withdrawForm" style="display:none; margin-top:10px">
+<label>¿Cuánto deseas retirar?</label>
+<input id="withdrawAmount" inputmode="decimal" placeholder="Ej: 20000" type="number"/>
+<small class="muted" id="withdrawHint"></small>
+<div style="height:8px"></div>
+<button class="secondary" id="withdrawNow">Retirar ahora</button>
+<div class="muted" id="withdrawErr" style="margin-top:6px"></div>
+</div>
+<hr/>
+<h3>Cambiar contraseña</h3>
+<input id="newPass" placeholder="nueva clave"/>
+<div style="height:10px"></div>
+<button class="secondary" id="savePass">Actualizar contraseña</button>
+<hr/>
+<h3>Medios de pago</h3>
+<div id="payWrap"></div>
+<div style="height:10px"></div>
+<button class="secondary" id="savePay">Guardar medios de pago</button>
+<div id="toast"></div>
+</div>
+</div>
+<div class="col">
+<div class="card">
+<div style="display:flex; gap:10px; margin-bottom:10px">
+<button class="secondary" id="btnShowBalotas" type="button">Balotas</button>
+<button id="btnShowRuleta" type="button">Ruleta</button>
+<button id="btnShowFrutas" type="button">Frutas</button>
+<button class="secondary" id="btnGoAviador" type="button">Aviador</button>
+<button class="secondary" id="btnGoEURUSD" type="button">EUR/USD</button></div>
+<div id="balotasSection">
+<h3 style="margin-top:0">Sorteo (demo cada 3 minutos)</h3>
+<div class="baloteraWrap">
+<canvas aria-label="Animación de balotera" height="280" id="baloteraCanvas" width="820"></canvas>
+<div aria-live="polite" class="extracted" id="extractedLine"></div>
+</div>
+<div id="drawLine"></div>
+<div id="pendingLine" style="margin-top:8px"></div>
+<hr/>
+<h4>Elige 3 a 5 números (01-99)</h4>
+<div class="grid99" id="grid99"></div>
+<div style="height:10px"></div>
+<label>Monto (demo)</label>
+<select id="bet">
+<option>100</option><option>300</option><option>500</option><option>1000</option><option>2000</option><option>3000</option><option>4000</option>
+</select>
+<div style="height:10px"></div>
+<button disabled="" id="play">Jugar (demo)</button>
+<hr/>
+<h4>Historial</h4>
+<table>
+<thead><tr><th>Fecha</th><th>Números</th><th>Apuesta</th><th>Coincid.</th><th>Payout</th></tr></thead>
+<tbody id="hist"></tbody>
+</table>
+</div>
+<div id="ruletaSection" style="display:none">
+<h3 style="margin-top:0">Ruleta (Circular)</h3>
+<small class="muted">Elige tu apuesta, define monto y presiona “Girar ahora”.</small>
+<div class="rouletteWrap" style="margin-top:12px">
+<div class="wheelFrame" id="wheelFrame">
+<canvas height="420" id="rouletteCanvas" width="420"></canvas>
+</div>
+<div class="rouletteResult" id="rouletteResult">Listo para girar.</div>
+</div>
+<div class="rouletteBetTable" id="rouletteBetTable"></div>
+<hr/>
+<h4 style="margin:0 0 8px 0">Apuestas rápidas</h4>
+<div class="rouletteBetsRow">
+<button class="betChip red" id="betRed" type="button">Rojo</button>
+<button class="betChip black" id="betBlack" type="button">Negro</button>
+<button class="betChip green" id="betZero" type="button">0</button>
+</div>
+<div style="height:10px"></div>
+<div class="rouletteBetsRow">
+<button class="betChip secondaryChip" data-bet="even" type="button">Par</button>
+<button class="betChip secondaryChip" data-bet="odd" type="button">Impar</button>
+<button class="betChip secondaryChip" data-bet="low" type="button">1-18</button>
+<button class="betChip secondaryChip" data-bet="high" type="button">19-36</button>
+</div>
+<div style="height:10px"></div>
+<div class="rouletteBetsRow">
+<button class="betChip secondaryChip" data-bet="dozen1" type="button">1-12</button>
+<button class="betChip secondaryChip" data-bet="dozen2" type="button">13-24</button>
+<button class="betChip secondaryChip" data-bet="dozen3" type="button">25-36</button>
+</div>
+<div style="height:10px"></div>
+<div class="rouletteBetsRow">
+<button class="betChip secondaryChip" data-bet="col1" type="button">Col 1</button>
+<button class="betChip secondaryChip" data-bet="col2" type="button">Col 2</button>
+<button class="betChip secondaryChip" data-bet="col3" type="button">Col 3</button>
+</div>
+<div style="height:12px"></div>
+<label>Número exacto (0-36) — pago 35:1</label>
+<div style="display:flex; gap:10px">
+<input id="rNumber" max="36" min="0" placeholder="Ej: 17" type="number"/>
+<button class="secondary" id="betNumber" style="max-width:180px" type="button">Apostar número</button>
+</div>
+<div style="height:12px"></div>
+<label>Monto</label>
+<select id="rBet">
+<option>100</option><option>300</option><option>500</option><option>1000</option><option>2000</option><option>3000</option><option>4000</option>
+</select>
+<div style="height:10px"></div>
+<div class="roulettePickBar">
+<div class="muted" id="roulettePickLine"></div>
+<button class="secondary" id="rouletteClear" type="button">Limpiar</button>
+</div>
+<small class="muted">Tip: clic agrega 1 selección; <b>Shift+clic</b> quita 1. Puedes repetir la misma apuesta varias veces.</small>
+<div style="height:10px"></div>
+<button disabled="" id="spinRoulette">Girar ahora</button>
+<hr/>
+<h4>Historial Ruleta</h4>
+<table>
+<thead><tr><th>Fecha</th><th>Apuesta</th><th>Monto</th><th>Resultado</th><th>Payout</th></tr></thead>
+<tbody id="rouletteHist"></tbody>
+</table>
+</div><div id="frutasSection" style="display:none">
+<h3 style="margin-top:0">Máquina de Frutas</h3>
+<small class="muted">Apuesta 200 por ficha. Máximo 9 fichas por símbolo. Presiona “Play” para girar la luz.</small>
+<div class="fruitMachineWrap" style="margin-top:12px">
+<div class="fruitBoard" id="fruitBoard">
+<div class="fruitCell" data-pos="0" style="grid-row:1;grid-column:1"></div>
+<div class="fruitCell" data-pos="1" style="grid-row:1;grid-column:2"></div>
+<div class="fruitCell" data-pos="2" style="grid-row:1;grid-column:3"></div>
+<div class="fruitCell" data-pos="3" style="grid-row:1;grid-column:4"></div>
+<div class="fruitCell" data-pos="4" style="grid-row:1;grid-column:5"></div>
+<div class="fruitCell" data-pos="5" style="grid-row:1;grid-column:6"></div>
+<div class="fruitCell" data-pos="6" style="grid-row:1;grid-column:7"></div>
+<div class="fruitCell" data-pos="7" style="grid-row:2;grid-column:7"></div>
+<div class="fruitCell" data-pos="8" style="grid-row:3;grid-column:7"></div>
+<div class="fruitCell" data-pos="9" style="grid-row:4;grid-column:7"></div>
+<div class="fruitCell" data-pos="10" style="grid-row:5;grid-column:7"></div>
+<div class="fruitCell" data-pos="11" style="grid-row:6;grid-column:7"></div>
+<div class="fruitCell" data-pos="12" style="grid-row:7;grid-column:7"></div>
+<div class="fruitCell" data-pos="13" style="grid-row:7;grid-column:6"></div>
+<div class="fruitCell" data-pos="14" style="grid-row:7;grid-column:5"></div>
+<div class="fruitCell" data-pos="15" style="grid-row:7;grid-column:4"></div>
+<div class="fruitCell" data-pos="16" style="grid-row:7;grid-column:3"></div>
+<div class="fruitCell" data-pos="17" style="grid-row:7;grid-column:2"></div>
+<div class="fruitCell" data-pos="18" style="grid-row:7;grid-column:1"></div>
+<div class="fruitCell" data-pos="19" style="grid-row:6;grid-column:1"></div>
+<div class="fruitCell" data-pos="20" style="grid-row:5;grid-column:1"></div>
+<div class="fruitCell" data-pos="21" style="grid-row:4;grid-column:1"></div>
+<div class="fruitCell" data-pos="22" style="grid-row:3;grid-column:1"></div>
+<div class="fruitCell" data-pos="23" style="grid-row:2;grid-column:1"></div>
+<div class="fruitCenter" id="fruitCenter" style="grid-row:2 / span 5; grid-column:2 / span 5;">
+  <div class="fruitCenterTop">
+    <div class="muted">Apuesta total</div>
+    <div class="fruitTotal" id="fruitTotal">$0</div>
+  </div>
+  <div style="height:8px"></div>
+  <button id="fruitPlay" type="button">Play</button>
+  <div style="height:8px"></div>
+  <button class="secondary" id="fruitClear" type="button">Limpiar apuestas</button>
+  <div class="muted" id="fruitMsg" style="margin-top:10px"></div>
+</div>
+</div>
+<div class="fruitBetPanel" style="margin-top:14px">
+<div class="fruitBetTitle">Selecciona tus apuestas (200 c/u)</div>
+<div class="fruitBetButtons" id="fruitBetButtons"></div>
+<div class="muted" style="margin-top:8px">Tip: puedes hacer clic varias veces en el mismo símbolo (hasta 9).</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

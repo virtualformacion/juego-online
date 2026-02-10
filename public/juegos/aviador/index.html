@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crash Aviador (Demo)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">✈️</div>
+      <div>
+        <div class="title">Crash Aviador</div>
+        <div class="subtitle">Integrado con saldo del usuario (demo)</div>
+      </div>
+    </div>
+
+    <div class="balance">
+      <div class="label">Balance</div>
+      <div class="value" id="balanceValue">$0.00</div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="gameCard">
+      <div class="gameTop">
+        <div class="status" id="statusText">Cargando…</div>
+        <div class="round">
+          <span>Ronda</span>
+          <strong id="roundId">#1</strong>
+        </div>
+      </div>
+
+      <div class="canvasWrap" id="canvasWrap">
+        <canvas id="trailCanvas" class="trailCanvas" aria-hidden="true"></canvas>
+
+        <div class="multiplier" id="multiplier">1.00×</div>
+
+        <div class="plane" id="plane" aria-hidden="true">
+          <img id="planeImg" src="assets/plane.png" alt="Avión" />
+        </div>
+
+        <div class="crashBanner" id="crashBanner" hidden>
+          CRASH <strong id="crashBannerX">—</strong>
+        </div>
+
+        <div class="explosion" id="explosion" hidden aria-hidden="true">
+          <img id="explosionImg" src="assets/explosion.gif" alt="" />
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="controlGroup">
+          <label for="betInput">Apuesta</label>
+          <div class="inputRow">
+            <input id="betInput" type="number" min="1" step="1" value="10" />
+            <button class="btn ghost" id="halfBtn">½</button>
+            <button class="btn ghost" id="doubleBtn">2×</button>
+          </div>
+        </div>
+
+        <div class="controlGroup">
+          <label for="autoCashoutInput">Auto Cashout (opcional)</label>
+          <input id="autoCashoutInput" type="number" min="1.01" step="0.01" placeholder="Ej: 1.75" />
+          <div class="hint">Si lo dejas vacío, haces cashout manual.</div>
+        </div>
+
+        <div class="buttonsRow">
+          <button class="btn primary" id="betBtn">Apostar</button>
+          <button class="btn success" id="cashoutBtn" disabled>Cash Out</button>
+          <button class="btn danger" id="resetBtn" title="Reinicia balance e historial">Reset</button>
+        </div>
+
+        <div class="infoRow">
+          <div class="pill">
+            <span>En juego:</span>
+            <strong id="inPlay">$0.00</strong>
+          </div>
+          <div class="pill">
+            <span>Ganancia potencial:</span>
+            <strong id="potential">$0.00</strong>
+          </div>
+        </div>
+
+        <div class="queueRow">
+          <div class="pill">
+            <span>En cola (próx. ronda):</span>
+            <strong id="queued">$0.00</strong>
+          </div>
+          <div class="pill">
+            <span>Para esta ronda (si está apostando):</span>
+            <strong id="forThis">$0.00</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="sideCard">
+      <h2>Historial</h2>
+      <div class="history" id="history"></div>
+
+      <div class="legend">
+        <div class="dot ok"></div><span>Cashout</span>
+        <div class="dot bad"></div><span>Crash</span>
+      </div>
+
+      <hr class="sep" />
+
+      <h2>Ajustes</h2>
+      <div class="settings">
+        <label class="switch">
+          <input type="checkbox" id="soundToggle" />
+          <span class="slider"></span>
+          <span class="switchLabel">Sonidos (simple)</span>
+        </label>
+
+        <label class="switch">
+          <input type="checkbox" id="fastModeToggle" />
+          <span class="slider"></span>
+          <span class="switchLabel">Modo rápido</span>
+        </label>
+      </div>
+
+      <p class="note">
+        Ciclo constante (30s apuestas → vuelo → 5s resultado) persistente con localStorage.
+      </p>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    Hecho para GitHub + Netlify · <span id="buildTag"></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

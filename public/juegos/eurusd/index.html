@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EUR/USD · Binarias</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div style="font-weight:700">EUR/USD · Binarias</div>
+        <small class="muted">Apuesta 60s · Payout x1.8 · Integrado a tu saldo</small>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <div id="saldoLine" class="pill">Saldo: —</div>
+        <button id="btnBack" class="secondary" type="button">⬅ Volver</button>
+        <button id="btnLogout" class="secondary" type="button">Salir</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="row headrow">
+        <div>
+          <div class="h1">Mercado (simulado)</div>
+          <div class="muted">Precio: <b id="priceNow">—</b> · Velas: 1 min · Vista: <b id="viewModeLabel">Velas</b></div>
+        </div>
+        <div class="muted">Tiempo apuesta: <b>60s</b></div>
+      </div>
+
+      <div class="chartOuter">
+        <div id="chart" class="chart"></div>
+
+        <!-- overlays binarias -->
+        <div id="overlayRange" class="overlayRange" style="left:-9999px;width:0px"></div>
+        <div id="overlayWhite" class="betWhiteLine" style="left:-9999px;width:0px;top:0px"></div>
+        <div id="overlayTimer" class="timerBadge" style="left:50%"></div>
+        <div id="overlayMeta" class="overlayVLine" style="left:-9999px">
+          <div class="flag">🏁 META</div>
+        </div>
+      </div>
+
+      <div class="row controls">
+        <div class="stakeWrap">
+          <div class="label">Monto</div>
+          <input id="stakeInput" type="number" />
+          <div class="stakeBtns">
+            <button id="btnMinus" class="stakeBtn minus" type="button">−</button>
+            <button id="btnPlus" class="stakeBtn plus" type="button">+</button>
+          </div>
+          <div class="muted" id="stakeHint">—</div>
+        </div>
+
+        <div class="btnsWrap">
+          <button id="btnSell" class="sell big" type="button">🔴 VENDER</button>
+          <button id="btnBuy" class="buy big" type="button">🟢 COMPRAR</button>
+          <button id="btnToggleView" class="toggle big" type="button">🔁 Ver LÍNEA</button>
+          <div class="muted" id="activeInfo">Sin apuesta</div>
+        </div>
+      </div>
+
+      <div id="toast" class="toast" style="display:none"></div>
+      <div id="err" class="err" style="display:none"></div>
+    </div>
+
+    <div class="card">
+      <div class="row headrow">
+        <div class="h1">Historial (20)</div>
+        <div class="muted">Se descuenta al apostar · Se paga al finalizar</div>
+      </div>
+      <div class="tableWrap">
+        <table class="table">
+          <thead>
+            <tr><th>Hora</th><th>Lado</th><th>Monto</th><th>Entrada</th><th>Final</th><th>Resultado</th></tr>
+          </thead>
+          <tbody id="histBody">
+            <tr><td class="muted" colspan="6">Sin historial aún.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/lightweight-charts@5.0.0/dist/lightweight-charts.standalone.production.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

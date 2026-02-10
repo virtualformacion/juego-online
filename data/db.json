@@ -1,0 +1,850 @@
+{
+  "allowRegister": true,
+  "users": [
+    {
+      "id": "admin-1",
+      "username": "admin",
+      "password": "luisymaye",
+      "role": "admin",
+      "country": "OT",
+      "currency": "USD",
+      "balance": 0,
+      "createdAt": "2026-01-31T00:00:00.000Z",
+      "payments": {},
+      "history": [],
+      "lastCreditNotice": null
+    },
+    {
+      "id": "user-1",
+      "username": "andres",
+      "password": "111111",
+      "role": "user",
+      "country": "CO",
+      "currency": "COP",
+      "balance": 79089.16642981193,
+      "createdAt": "2026-01-31T00:00:00.000Z",
+      "payments": {
+        "binance": "",
+        "owner": "andres",
+        "nequi": "3206199480",
+        "daviplata": ""
+      },
+      "history": [
+        {
+          "id": "5bca84a9-66bc-4be2-8b74-515671ccd482",
+          "at": "2026-01-31T20:22:30.852Z",
+          "pick": [
+            "92",
+            "93",
+            "82",
+            "71"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100
+        },
+        {
+          "id": "9e391e09-df52-42b2-a704-24bb2c5ac5de",
+          "at": "2026-01-31T20:22:45.833Z",
+          "pick": [
+            "88",
+            "85",
+            "79"
+          ],
+          "bet": 100,
+          "matches": 3,
+          "payout": 300
+        },
+        {
+          "id": "0c931be6-fc1b-4eaf-b72a-d10f1d4587f4",
+          "at": "2026-02-03T02:00:02.455Z",
+          "pick": [
+            "15",
+            "16",
+            "17"
+          ],
+          "bet": 500,
+          "matches": 1,
+          "payout": -500,
+          "credited": 0,
+          "cycle": 9833800,
+          "drawAt": "2026-02-03T02:00:00.000Z"
+        },
+        {
+          "id": "f923cf54-aebc-4d65-aba3-eab10ff2b1ac",
+          "at": "2026-02-03T02:00:02.455Z",
+          "pick": [
+            "37",
+            "38",
+            "39"
+          ],
+          "bet": 500,
+          "matches": 0,
+          "payout": -500,
+          "credited": 0,
+          "cycle": 9833800,
+          "drawAt": "2026-02-03T02:00:00.000Z"
+        },
+        {
+          "id": "a9c47eea-3a7c-4aab-b549-b6678f042873",
+          "at": "2026-02-03T02:00:02.455Z",
+          "pick": [
+            "38",
+            "40",
+            "42"
+          ],
+          "bet": 500,
+          "matches": 0,
+          "payout": -500,
+          "credited": 0,
+          "cycle": 9833800,
+          "drawAt": "2026-02-03T02:00:00.000Z"
+        },
+        {
+          "id": "c3afe224-2b51-4e96-bf62-12ea8a23d853",
+          "at": "2026-02-03T02:00:02.455Z",
+          "pick": [
+            "63",
+            "62",
+            "61"
+          ],
+          "bet": 500,
+          "matches": 0,
+          "payout": -500,
+          "credited": 0,
+          "cycle": 9833800,
+          "drawAt": "2026-02-03T02:00:00.000Z"
+        },
+        {
+          "id": "575acb45-e207-440d-a42a-84117a12e208",
+          "at": "2026-02-03T02:00:02.455Z",
+          "pick": [
+            "07",
+            "08",
+            "09"
+          ],
+          "bet": 500,
+          "matches": 1,
+          "payout": -500,
+          "credited": 0,
+          "cycle": 9833800,
+          "drawAt": "2026-02-03T02:00:00.000Z"
+        },
+        {
+          "id": "f7837fe1-39f7-4cd4-9e7e-74ddca9345de",
+          "at": "2026-02-03T02:00:02.455Z",
+          "pick": [
+            "10",
+            "21",
+            "32"
+          ],
+          "bet": 500,
+          "matches": 0,
+          "payout": -500,
+          "credited": 0,
+          "cycle": 9833800,
+          "drawAt": "2026-02-03T02:00:00.000Z"
+        },
+        {
+          "id": "b0ac1e78-3af5-413d-97b3-78b623e43772",
+          "at": "2026-02-03T02:00:02.455Z",
+          "pick": [
+            "13",
+            "24",
+            "35"
+          ],
+          "bet": 500,
+          "matches": 1,
+          "payout": -500,
+          "credited": 0,
+          "cycle": 9833800,
+          "drawAt": "2026-02-03T02:00:00.000Z"
+        },
+        {
+          "id": "5fdf749e-f60b-4519-b6f4-df305fb46a4d",
+          "at": "2026-02-03T02:24:01.991Z",
+          "pick": [
+            "48",
+            "47",
+            "36"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9833808,
+          "drawAt": "2026-02-03T02:24:00.000Z"
+        },
+        {
+          "id": "beaca99c-86fc-48dc-8861-fc62165d7388",
+          "at": "2026-02-03T02:24:01.991Z",
+          "pick": [
+            "39",
+            "50",
+            "61"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9833808,
+          "drawAt": "2026-02-03T02:24:00.000Z"
+        },
+        {
+          "id": "092ef255-4107-4966-bff4-6847ed7ecd82",
+          "at": "2026-02-03T02:24:01.991Z",
+          "pick": [
+            "41",
+            "52",
+            "63"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9833808,
+          "drawAt": "2026-02-03T02:24:00.000Z"
+        },
+        {
+          "id": "28946947-eaf0-443a-a342-c9624034419f",
+          "at": "2026-02-03T02:42:02.618Z",
+          "pick": [
+            "04",
+            "05",
+            "06"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9833814,
+          "drawAt": "2026-02-03T02:42:00.000Z"
+        },
+        {
+          "id": "90fa96ec-7216-4a1e-a963-4aab51cfc9e1",
+          "at": "2026-02-03T02:42:02.618Z",
+          "pick": [
+            "17",
+            "16",
+            "15"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9833814,
+          "drawAt": "2026-02-03T02:42:00.000Z"
+        },
+        {
+          "id": "35ed3c42-c54b-47d4-92ba-a43fbd168a00",
+          "at": "2026-02-03T22:54:02.102Z",
+          "pick": [
+            "52",
+            "51",
+            "50"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834218,
+          "drawAt": "2026-02-03T22:54:00.000Z"
+        },
+        {
+          "id": "ac702297-f8d3-4991-aba3-38d20cbb07ff",
+          "at": "2026-02-03T22:54:02.102Z",
+          "pick": [
+            "42",
+            "41",
+            "40",
+            "39",
+            "38"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834218,
+          "drawAt": "2026-02-03T22:54:00.000Z"
+        },
+        {
+          "id": "534d0996-71e1-463d-b0a8-9c435a8c02cc",
+          "at": "2026-02-03T22:54:02.102Z",
+          "pick": [
+            "17",
+            "18",
+            "16",
+            "15"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834218,
+          "drawAt": "2026-02-03T22:54:00.000Z"
+        },
+        {
+          "id": "4ee2f865-28fa-473b-b033-d8342c5b0212",
+          "at": "2026-02-03T22:54:02.102Z",
+          "pick": [
+            "29",
+            "30",
+            "28"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834218,
+          "drawAt": "2026-02-03T22:54:00.000Z"
+        },
+        {
+          "id": "d7e2e3d2-4837-426e-a561-cc89946bb874",
+          "at": "2026-02-03T22:54:02.102Z",
+          "pick": [
+            "73",
+            "72",
+            "71",
+            "70",
+            "69"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834218,
+          "drawAt": "2026-02-03T22:54:00.000Z"
+        },
+        {
+          "id": "967c7dbf-15de-489e-9ad4-7ca3027a8b9d",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "03",
+            "04",
+            "05"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "48600168-ef39-4b4e-b5a2-57147ab99db2",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "39",
+            "46",
+            "52",
+            "42"
+          ],
+          "bet": 100,
+          "matches": 3,
+          "payout": 300,
+          "credited": 400,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "a1010f9a-ad46-40fd-bad0-c5cb715201b0",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "19",
+            "25",
+            "18",
+            "17"
+          ],
+          "bet": 100,
+          "matches": 2,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "b7994030-0e0f-42c1-9dd9-760dbe570451",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "93",
+            "95",
+            "94"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "5a5d3076-823d-497b-ae1a-05a994afdcc9",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "98",
+            "97",
+            "96"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "c76a6254-3af5-407b-94fb-1abc754b249e",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "93",
+            "92",
+            "91"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "7f56cf7a-5eca-404b-8420-656f07707c05",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "79",
+            "80",
+            "81"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "64e66d65-3234-4d56-9559-b26482d76185",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "71",
+            "72",
+            "73"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "f7b0941d-088d-4257-8b76-dcc35c144749",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "85",
+            "86",
+            "87"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "7d84ef59-446c-4554-9520-bd5e369495fe",
+          "at": "2026-02-04T02:54:02.219Z",
+          "pick": [
+            "37",
+            "38",
+            "39",
+            "26",
+            "27"
+          ],
+          "bet": 100,
+          "matches": 2,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9834298,
+          "drawAt": "2026-02-04T02:54:00.000Z"
+        },
+        {
+          "id": "14e2c08f-9954-4b12-a595-1866666d51fe",
+          "at": "2026-02-06T22:15:02.456Z",
+          "pick": [
+            "06",
+            "07",
+            "08"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9835645,
+          "drawAt": "2026-02-06T22:15:00.000Z"
+        },
+        {
+          "id": "819d8017-0906-4948-8bbb-93e39be26605",
+          "at": "2026-02-07T18:57:02.073Z",
+          "pick": [
+            "03",
+            "04",
+            "05"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9836059,
+          "drawAt": "2026-02-07T18:57:00.000Z"
+        },
+        {
+          "id": "27e2d36f-ae35-41f9-a9d1-c87e7f791f80",
+          "at": "2026-02-07T18:57:02.073Z",
+          "pick": [
+            "17",
+            "18",
+            "19"
+          ],
+          "bet": 100,
+          "matches": 2,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9836059,
+          "drawAt": "2026-02-07T18:57:00.000Z"
+        }
+      ],
+      "lastCreditNotice": {
+        "amount": 40000,
+        "currency": "COP",
+        "at": "2026-01-31T22:18:15.431Z",
+        "seen": true,
+        "note": "Ajuste admin (suma)"
+      },
+      "pendingBets": [],
+      "rouletteHistory": [
+        {
+          "at": 1770158896144,
+          "bet": "Número 35 (35:1) x1",
+          "amount": 100,
+          "result": 22,
+          "payout": 0
+        },
+        {
+          "at": 1770158943386,
+          "bet": "Número 11 (35:1) x1",
+          "amount": 100,
+          "result": 18,
+          "payout": 0
+        },
+        {
+          "at": 1770158968634,
+          "bet": "Número 11 (35:1) x1",
+          "amount": 100,
+          "result": 29,
+          "payout": 0
+        },
+        {
+          "at": 1770158984408,
+          "bet": "Número 17 (35:1) x1",
+          "amount": 100,
+          "result": 31,
+          "payout": 0
+        },
+        {
+          "at": 1770159344846,
+          "bet": "Número 23 (35:1) x1 + Número 20 (35:1) x1 + Número 18 (35:1) x1 + Número 16 (35:1) x1 + Número 17 (35:1) x1 + Número 19 (35:1) x1 + Número 21 (35:1) x1 + Número 22 (35:1) x1 + Número 24 (35:1) x1",
+          "amount": 900,
+          "result": 32,
+          "payout": 0
+        },
+        {
+          "at": 1770173884643,
+          "bet": "Negro (1:1) x1",
+          "amount": 100,
+          "result": 23,
+          "payout": 0
+        },
+        {
+          "at": 1770173899591,
+          "bet": "Negro (1:1) x2",
+          "amount": 200,
+          "result": 18,
+          "payout": 0
+        },
+        {
+          "at": 1770173916061,
+          "bet": "Negro (1:1) x3",
+          "amount": 300,
+          "result": 18,
+          "payout": 0
+        },
+        {
+          "at": 1770173933945,
+          "bet": "Negro (1:1) x4",
+          "amount": 400,
+          "result": 2,
+          "payout": 800
+        },
+        {
+          "at": 1770173978475,
+          "bet": "Negro (1:1) x1",
+          "amount": 100,
+          "result": 1,
+          "payout": 0
+        },
+        {
+          "at": 1770309316420,
+          "bet": "Número 26 (35:1) x1",
+          "amount": 100,
+          "result": 35,
+          "payout": 0
+        }
+      ],
+      "fruitHistory": [
+        {
+          "at": "2026-02-03T22:50:21.535Z",
+          "bets": {
+            "seven77": 1,
+            "barbar": 1,
+            "star": 1,
+            "bell": 1,
+            "diamond": 1,
+            "crown": 1
+          },
+          "total": 1200,
+          "winner": "cherry",
+          "mult": 2,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-03T22:50:43.078Z",
+          "bets": {
+            "bell": 1,
+            "diamond": 1,
+            "crown": 1,
+            "star": 1,
+            "barbar": 1,
+            "seven77": 1
+          },
+          "total": 1200,
+          "winner": "grape",
+          "mult": 3,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-03T22:51:10.342Z",
+          "bets": {
+            "seven77": 1,
+            "barbar": 1,
+            "star": 1,
+            "diamond": 1,
+            "crown": 1,
+            "bell": 1
+          },
+          "total": 1200,
+          "winner": "diamond",
+          "mult": 10,
+          "payout": 2000
+        },
+        {
+          "at": "2026-02-03T22:51:37.426Z",
+          "bets": {
+            "barbar": 1,
+            "star": 1,
+            "bell": 1,
+            "diamond": 1,
+            "crown": 1,
+            "seven77": 1
+          },
+          "total": 1200,
+          "winner": "cherry",
+          "mult": 2,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-03T22:52:33.891Z",
+          "bets": {
+            "star": 1,
+            "crown": 1,
+            "seven77": 1,
+            "barbar": 1,
+            "diamond": 1,
+            "bell": 1
+          },
+          "total": 1200,
+          "winner": "bell",
+          "mult": 8,
+          "payout": 1600
+        },
+        {
+          "at": "2026-02-03T22:56:36.104Z",
+          "bets": {
+            "seven77": 1,
+            "barbar": 1,
+            "star": 1,
+            "crown": 1,
+            "bell": 1,
+            "diamond": 1
+          },
+          "total": 1200,
+          "winner": "cherry",
+          "mult": 2,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-03T22:57:01.008Z",
+          "bets": {
+            "diamond": 1,
+            "bell": 1,
+            "crown": 1,
+            "star": 1,
+            "seven77": 1,
+            "barbar": 1
+          },
+          "total": 1200,
+          "winner": "orange",
+          "mult": 2,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-04T02:56:25.654Z",
+          "bets": {
+            "barbar": 1
+          },
+          "total": 200,
+          "winner": "orange",
+          "mult": 2,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-04T02:56:50.504Z",
+          "bets": {
+            "barbar": 1,
+            "seven77": 1,
+            "star": 1,
+            "bell": 1,
+            "diamond": 1,
+            "crown": 1
+          },
+          "total": 1200,
+          "winner": "cherry",
+          "mult": 2,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-04T02:57:12.998Z",
+          "bets": {
+            "diamond": 1,
+            "bell": 1,
+            "star": 1,
+            "barbar": 1,
+            "seven77": 1,
+            "crown": 1
+          },
+          "total": 1200,
+          "winner": "crown",
+          "mult": 12,
+          "payout": 2400
+        },
+        {
+          "at": "2026-02-04T02:57:43.643Z",
+          "bets": {
+            "crown": 1,
+            "diamond": 1,
+            "bell": 1,
+            "star": 1,
+            "barbar": 1,
+            "seven77": 1
+          },
+          "total": 1200,
+          "winner": "grape",
+          "mult": 3,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-05T16:35:37.421Z",
+          "bets": {
+            "barbar": 1
+          },
+          "total": 200,
+          "winner": "cherry",
+          "mult": 2,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-06T22:16:12.884Z",
+          "bets": {
+            "barbar": 1
+          },
+          "total": 200,
+          "winner": "crown",
+          "mult": 12,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-06T22:17:04.401Z",
+          "bets": {
+            "barbar": 1
+          },
+          "total": 200,
+          "winner": "cherry",
+          "mult": 2,
+          "payout": 0
+        },
+        {
+          "at": "2026-02-06T22:20:07.293Z",
+          "bets": {
+            "barbar": 1
+          },
+          "total": 200,
+          "winner": "barbar",
+          "mult": 100,
+          "payout": 20000
+        },
+        {
+          "at": "2026-02-06T22:20:41.123Z",
+          "bets": {
+            "barbar": 1
+          },
+          "total": 200,
+          "winner": "barbar",
+          "mult": 100,
+          "payout": 20000
+        },
+        {
+          "at": "2026-02-08T04:17:18.624Z",
+          "bets": {
+            "barbar": 1
+          },
+          "total": 200,
+          "winner": "lemon",
+          "mult": 2,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "id": "0ac57420-e7af-4be6-8b3a-539bfd4373e7",
+      "username": "ana",
+      "password": "111111",
+      "role": "user",
+      "country": "OT",
+      "currency": "USD",
+      "balance": 12,
+      "createdAt": "2026-01-31T20:51:25.389Z",
+      "payments": {
+        "binance": "800255455"
+      },
+      "history": [],
+      "lastCreditNotice": {
+        "amount": 10,
+        "currency": "USD",
+        "at": "2026-01-31T22:17:30.440Z",
+        "seen": true,
+        "note": "Ajuste admin (suma)"
+      }
+    }
+  ]
+}

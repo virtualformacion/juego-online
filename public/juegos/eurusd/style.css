@@ -1,0 +1,77 @@
+/* Estilos específicos EURUSD */
+.card{ margin-top:12px; }
+.h1{ font-size:16px; font-weight:900; margin:0; }
+.row{ display:flex; gap:12px; flex-wrap:wrap; align-items:flex-start; }
+.headrow{ align-items:center; justify-content:space-between; }
+.chartOuter{ position:relative; margin-top:10px; }
+.chart{ width:100%; height:520px; border:1px solid rgba(148,163,184,.18); border-radius:14px; overflow:hidden; }
+
+.controls{ margin-top:12px; align-items:stretch; }
+.stakeWrap{ display:flex; flex-direction:column; gap:8px; min-width:230px; }
+.label{ font-size:12px; color: var(--muted); }
+#stakeInput{ width:100%; padding:12px; border-radius:12px; border:1px solid rgba(148,163,184,.18); background:rgba(0,0,0,.25); color:var(--text); outline:none; }
+
+.stakeBtns{ display:flex; gap:10px; }
+.stakeBtn{
+  flex:1; padding:14px 0; font-size:20px; font-weight:900;
+  border-radius:14px; border:1px solid rgba(148,163,184,.18);
+  background:rgba(0,0,0,.35); cursor:pointer;
+}
+.stakeBtn:disabled{ opacity:.55; cursor:not-allowed; }
+.stakeBtn.plus{ border-color:rgba(34,197,94,.55); }
+.stakeBtn.minus{ border-color:rgba(239,68,68,.55); }
+
+.btnsWrap{ flex:1; min-width:260px; display:flex; flex-direction:column; gap:10px; }
+.big{ padding:14px 14px; border-radius:14px; font-weight:900; font-size:15px; border:1px solid rgba(148,163,184,.18); background:rgba(0,0,0,.30); cursor:pointer; }
+.big:disabled{ opacity:.55; cursor:not-allowed; }
+.buy{ border-color:rgba(34,197,94,.55); }
+.sell{ border-color:rgba(239,68,68,.55); }
+.toggle{ border-color:rgba(250,204,21,.35); }
+
+.toast{ margin-top:12px; padding:10px 12px; border-radius:12px; border:1px solid rgba(148,163,184,.18); background:rgba(0,0,0,.24); font-size:13px; }
+.toast.win{ border-color:rgba(34,197,94,.45); background:rgba(34,197,94,.08); }
+.toast.lose{ border-color:rgba(239,68,68,.45); background:rgba(239,68,68,.08); }
+.err{ margin-top:12px; padding:10px; border-radius:12px; border:1px solid rgba(239,68,68,.45); background:rgba(239,68,68,.08); color:#fecaca; font-size:12px; white-space:pre-wrap; }
+
+/* overlays binarias */
+.overlayVLine{
+  position:absolute; top:12px; bottom:12px; width:0;
+  border-left:2px dashed rgba(250,204,21,.95);
+  pointer-events:none; z-index:6;
+  filter: drop-shadow(0 0 8px rgba(250,204,21,.22));
+}
+.flag{
+  position:absolute; top:6px; left:0; transform: translateX(-50%);
+  background: rgba(250,204,21,.16);
+  border:1px solid rgba(250,204,21,.55);
+  border-radius:999px; padding:3px 8px;
+  font-size:12px; color:#fff7cc; white-space:nowrap;
+}
+.overlayRange{
+  position:absolute; top:12px; bottom:12px;
+  background: rgba(250,204,21,.06);
+  border-top:1px solid rgba(250,204,21,.22);
+  border-bottom:1px solid rgba(250,204,21,.22);
+  pointer-events:none; z-index:4;
+}
+.betWhiteLine{
+  position:absolute; height:2px;
+  background: rgba(255,255,255,.85);
+  border-radius: 999px;
+  pointer-events:none; z-index:5;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,.18));
+}
+.timerBadge{
+  position:absolute; top:14px;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,.55);
+  border:1px solid rgba(250,204,21,.45);
+  border-radius: 999px;
+  padding:4px 10px;
+  font-size:12px; color:#fff7cc; white-space:nowrap;
+  box-shadow: 0 10px 25px rgba(0,0,0,.35);
+  z-index:7;
+}
+.tableWrap{ overflow:auto; }
+.table{ width:100%; border-collapse:collapse; margin-top:10px; font-size:13px; }
+.table th,.table td{ border-bottom:1px solid rgba(148,163,184,.14); padding:8px 6px; text-align:left; }

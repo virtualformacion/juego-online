@@ -1,0 +1,338 @@
+:root{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+body{margin:0;background:#0b1020;color:#eef2ff}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:22px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);font-size:12px}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.col{flex:1 1 340px}
+input,select,button,textarea{width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.25);color:#eef2ff}
+button{cursor:pointer;background:linear-gradient(135deg,#6d28d9,#2563eb);border:none}
+button.secondary{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18)}
+button.danger{background:linear-gradient(135deg,#ef4444,#b91c1c)}
+small.muted{color:rgba(238,242,255,.7)}
+hr{border:none;border-top:1px solid rgba(255,255,255,.12);margin:14px 0}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.10);font-size:14px}
+.toast{margin-top:10px;padding:10px 12px;border-radius:12px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.35)}
+.toast.warn{background:rgba(234,179,8,.15);border-color:rgba(234,179,8,.35)}
+.toast.err{background:rgba(239,68,68,.15);border-color:rgba(239,68,68,.35)}
+.grid99{display:grid;grid-template-columns:repeat(11,1fr);gap:8px}
+.grid99 button{padding:8px 0;border-radius:10px;font-size:13px}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pills .pill{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);font-size:12px}
+
+
+/* Balotera animation */
+.baloteraWrap{margin:10px 0 8px 0}
+#baloteraCanvas{width:100%;max-width:100%;height:auto;display:block;border-radius:14px;background:radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,.10), rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.10)}
+.extracted{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.extracted .ball{width:34px;height:34px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.98), rgba(225,225,225,.92));color:rgba(10,10,10,.92);border:1px solid rgba(255,255,255,.25);box-shadow:0 10px 22px rgba(0,0,0,.25), inset 0 0 0 5px rgba(255,255,255,.0), inset 0 0 0 4px rgba(255,255,255,.0);position:relative;}
+.extracted .ball.new{animation:pop .25s ease-out}
+@keyframes pop{from{transform:scale(.75);opacity:.4}to{transform:scale(1);opacity:1}}
+
+.extracted .ball::after{content:'';position:absolute;inset:7px;border-radius:999px;box-shadow:inset 0 0 0 3px var(--ring, rgba(120,180,255,.55));opacity:.95;}
+
+
+/* ===== Ruleta ===== */
+.rouletteWrap{margin-top:10px}
+.rouletteViewport{
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.25);
+  height:92px;
+}
+.rouletteTrack{
+  position:absolute;
+  top:0; left:0;
+  height:92px;
+  display:flex;
+  align-items:stretch;
+  will-change:transform;
+  transform:translateX(0px);
+}
+.roulettePocket{
+  width:60px;
+  height:92px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+  font-size:18px;
+  border-right:1px solid rgba(255,255,255,.10);
+  user-select:none;
+}
+.roulettePocket.red{background:rgba(239,68,68,.25)}
+.roulettePocket.black{background:rgba(15,23,42,.55)}
+.roulettePocket.green{background:rgba(34,197,94,.25)}
+.roulettePocket.win{
+  outline:3px solid rgba(255,255,255,.85);
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
+  transform:scale(1.15);
+  z-index:2;
+}
+.rouletteBall{
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:18px; height:18px;
+  border-radius:999px;
+  background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.95), rgba(200,200,200,.85));
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:0 10px 18px rgba(0,0,0,.35);
+  pointer-events:none;
+}
+.rouletteResult{
+  margin-top:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  min-height:44px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.rouletteResult .big{
+  font-size:26px;
+  font-weight:1000;
+}
+.rouletteBetsRow{display:flex; gap:10px; flex-wrap:wrap}
+.betChip{
+  width:auto;
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:800;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.08);
+}
+.betChip.red{background:rgba(239,68,68,.25)}
+.betChip.black{background:rgba(15,23,42,.65)}
+.betChip.green{background:rgba(34,197,94,.25)}
+.secondaryChip{background:rgba(255,255,255,.10)}
+.betChip.active{
+  outline:2px solid rgba(255,255,255,.85);
+  transform:translateY(-1px);
+}
+
+
+/* ===== Ruleta circular + mesa (casino) ===== */
+.wheelFrame{
+  width: min(420px, 100%);
+  aspect-ratio: 1 / 1;
+  margin: 12px auto 0 auto;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,.10), rgba(0,0,0,.25));
+  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  transform: scale(1);
+  transition: transform 200ms ease;
+}
+.wheelFrame canvas{
+  width: 100%;
+  height: 100%;
+  display:block;
+}
+
+.rouletteBetTable{
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.22);
+}
+.rtWrap{
+  display:grid;
+  grid-template-columns: 70px 1fr;
+  gap: 10px;
+  align-items: stretch;
+}
+.rtZero{
+  grid-row: 1 / span 12;
+  font-size: 20px;
+  font-weight: 1000;
+  border-radius: 14px;
+}
+.rtGrid{
+  display:grid;
+  grid-template-rows: repeat(12, 1fr);
+  gap: 6px;
+}
+.rtRow{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.rtCell{
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  padding: 10px 0;
+  font-weight: 1000;
+  background: rgba(255,255,255,.06);
+}
+.rtCell.red{ background: rgba(239,68,68,.25); }
+.rtCell.black{ background: rgba(15,23,42,.55); }
+.rtCell.green{ background: rgba(34,197,94,.25); }
+.rtCell.active{
+  outline: 2px solid rgba(255,255,255,.90);
+  transform: translateY(-1px);
+}
+.rtCols{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 10px;
+}
+.rtOutside{
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  padding: 10px 0;
+  font-weight: 900;
+  background: rgba(255,255,255,.08);
+}
+.rtOutside.active{
+  outline: 2px solid rgba(255,255,255,.90);
+  transform: translateY(-1px);
+}
+
+
+/* ===== Ruleta: selección múltiple ===== */
+
+.roulettePickBar{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+.pickCount{
+  font-size:12px;
+  font-weight:800;
+  padding:2px 8px;
+  border-radius:999px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.18);
+}
+.rtCell{position:relative}
+.rtOutside{position:relative}
+.betChip{position:relative}
+.rtCell .pickCount,
+.rtOutside .pickCount,
+.betChip .pickCount{
+  position:absolute;
+  top:6px;
+  right:6px;
+}
+
+
+/* ===== Fruit Light Machine ===== */
+.fruitMachineWrap{display:block}
+.fruitBoard{
+  display:grid;
+  grid-template-columns:repeat(7, minmax(0, 1fr));
+  gap:6px;
+  align-items:stretch;
+  width:min(92vw, 520px);
+  margin:0 auto;
+}
+
+.fruitCell, .fruitCenter{
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  border-radius:14px;
+  padding:6px;
+  min-height: 0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.fruitCell{
+  aspect-ratio: 1 / 1;
+}
+.fruitCenter{
+  padding:10px;
+}
+.fruitCell img{
+  width:40px;height:40px;display:block;
+  filter:drop-shadow(0 6px 10px rgba(0,0,0,.35));
+}
+.fruitCell .fruitName{font-size:12px;margin-top:6px;opacity:.9}
+.fruitCell .fruitPay{font-size:11px;margin-top:2px;opacity:.7}
+.fruitCell .fruitBetCount{
+  position:absolute;top:8px;right:8px;
+  font-size:12px;
+  padding:3px 8px;border-radius:999px;
+  background:rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.18);
+  display:none;
+}
+.fruitCell.hasBet .fruitBetCount{display:inline-block}
+.fruitCell.active{
+  outline:2px solid rgba(255,255,255,.85);
+  box-shadow:0 0 0 6px rgba(99,102,241,.18);
+  transform:translateY(-1px);
+}
+.fruitCell.bonus1{
+  outline:2px solid rgba(34,197,94,.85);
+  box-shadow:0 0 0 6px rgba(34,197,94,.16);
+}
+.fruitCell.bonus2{
+  outline:2px solid rgba(245,158,11,.9);
+  box-shadow:0 0 0 6px rgba(245,158,11,.16);
+}
+.fruitCenter{
+  min-height:210px;
+  padding:14px;
+  text-align:center;
+}
+.fruitCenterTop{display:flex;flex-direction:column;gap:2px}
+.fruitTotal{font-size:22px;font-weight:800}
+.fruitBetPanel{margin-top:14px}
+.fruitBetTitle{font-weight:700;margin-bottom:10px}
+.fruitBetButtons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));
+  gap:10px;
+  margin-top:10px;
+}
+@media (max-width: 520px){
+  .fruitBetButtons{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:8px;
+  }
+  .fruitCell img{ width:34px; height:34px; }
+  .fruitCell .fruitName{ font-size:11px; }
+  .fruitCell .fruitPay{ font-size:10px; }
+}
+.fruitBetBtn{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  cursor:pointer;
+  user-select:none;
+  transition:transform .08s ease, border-color .08s ease, background .08s ease;
+}
+.fruitBetBtn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.06)}
+.fruitBetBtn img{width:34px;height:34px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+.fruitBetBtn .meta{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.fruitBetBtn .meta .t{font-weight:700;font-size:13px}
+.fruitBetBtn .meta .s{font-size:12px;opacity:.75}
+.fruitBetBtn .chip{
+  margin-left:auto;
+  min-width:36px;
+  text-align:center;
+  padding:4px 10px;
+  border-radius:999px;
+  background:rgba(0,0,0,.28);
+  border:1px solid rgba(255,255,255,.14);
+  font-weight:700;
+}
+.fruitBetBtn.maxed{opacity:.55}
+
