@@ -21,7 +21,7 @@
       "role": "user",
       "country": "CO",
       "currency": "COP",
-      "balance": 78889,
+      "balance": 78789,
       "createdAt": "2026-01-31T00:00:00.000Z",
       "payments": {
         "binance": "",
@@ -542,6 +542,17 @@
             "49",
             "50",
             "51"
+          ],
+          "bet": 100
+        },
+        {
+          "id": "1d7c1d03-3dde-4e55-afc3-020b28510feb",
+          "createdAt": "2026-02-10T03:23:10.124Z",
+          "targetCycle": 9837188,
+          "pick": [
+            "60",
+            "61",
+            "62"
           ],
           "bet": 100
         }
