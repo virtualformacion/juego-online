@@ -513,6 +513,51 @@
           "credited": 0,
           "cycle": 9836059,
           "drawAt": "2026-02-07T18:57:00.000Z"
+        },
+        {
+          "id": "cf101849-6c73-4fbc-8da0-3a9172c54655",
+          "at": "2026-02-10T03:24:01.921Z",
+          "pick": [
+            "04",
+            "05",
+            "06"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9837188,
+          "drawAt": "2026-02-10T03:24:00.000Z"
+        },
+        {
+          "id": "f0d0e238-4ce6-4e4f-87f8-da0e41532a92",
+          "at": "2026-02-10T03:24:01.921Z",
+          "pick": [
+            "49",
+            "50",
+            "51"
+          ],
+          "bet": 100,
+          "matches": 0,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9837188,
+          "drawAt": "2026-02-10T03:24:00.000Z"
+        },
+        {
+          "id": "1d7c1d03-3dde-4e55-afc3-020b28510feb",
+          "at": "2026-02-10T03:24:01.921Z",
+          "pick": [
+            "60",
+            "61",
+            "62"
+          ],
+          "bet": 100,
+          "matches": 1,
+          "payout": -100,
+          "credited": 0,
+          "cycle": 9837188,
+          "drawAt": "2026-02-10T03:24:00.000Z"
         }
       ],
       "lastCreditNotice": {
@@ -522,41 +567,7 @@
         "seen": true,
         "note": "Ajuste admin (suma)"
       },
-      "pendingBets": [
-        {
-          "id": "cf101849-6c73-4fbc-8da0-3a9172c54655",
-          "createdAt": "2026-02-10T03:22:42.502Z",
-          "targetCycle": 9837188,
-          "pick": [
-            "04",
-            "05",
-            "06"
-          ],
-          "bet": 100
-        },
-        {
-          "id": "f0d0e238-4ce6-4e4f-87f8-da0e41532a92",
-          "createdAt": "2026-02-10T03:23:06.341Z",
-          "targetCycle": 9837188,
-          "pick": [
-            "49",
-            "50",
-            "51"
-          ],
-          "bet": 100
-        },
-        {
-          "id": "1d7c1d03-3dde-4e55-afc3-020b28510feb",
-          "createdAt": "2026-02-10T03:23:10.124Z",
-          "targetCycle": 9837188,
-          "pick": [
-            "60",
-            "61",
-            "62"
-          ],
-          "bet": 100
-        }
-      ],
+      "pendingBets": [],
       "rouletteHistory": [
         {
           "at": 1770158896144,
